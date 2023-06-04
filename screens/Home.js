@@ -1,7 +1,12 @@
-import {Text, SafeAreaView, Image, View} from 'react-native';
+import {Text, SafeAreaView, Image, View, TextInput} from 'react-native';
 import React, {useLayoutEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {ChevronDownIcon, UserIcon} from 'react-native-heroicons/outline';
+import {
+  ChevronDownIcon,
+  UserIcon,
+  AdjustmentsVerticalIcon,
+  MagnifyingGlassIcon,
+} from 'react-native-heroicons/outline';
 // import deliveryLogo from '../../food_delivery_app/assets/delivery_icon.avif';
 
 const Home = () => {
@@ -30,6 +35,13 @@ const Home = () => {
           </Text>
         </View>
         <UserIcon size={35} color="#00CCBB" />
+      </View>
+      <View className="mx-4 flex-row items-center space-x-2 pb-4">
+        <View className="flex-row space-x-2 flex-1 bg-gray-200 p-3">
+          <MagnifyingGlassIcon color="gray" size={20} />
+          <TextInput placeholder="Search Icecream" keyboardType="default" />
+        </View>
+        <AdjustmentsVerticalIcon color="#00CCBB" />
       </View>
     </SafeAreaView>
   );
